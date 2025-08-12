@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Devi Priya",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 10.2, "left": -87, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -118.8,
+      "left": 13.4,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -33.6,
+      "left": 9.05,
+      "rotate": 90,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "r1:2", "green", [ "v19.2" ] ],
+    [ "r1:2", "uno:13", "green", [ "h0", "v18" ] ],
+    [ "uno:GND.1", "led1:C", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
